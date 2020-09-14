@@ -10,6 +10,10 @@
     "newsletter-minion": "dist/index.js"
   },
   "devDependencies": {
+    "@types/convict": "^5.2.1",
     "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "convict": "^6.0.0"
   }
 }
