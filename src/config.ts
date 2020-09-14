@@ -1,11 +1,11 @@
 import convict from 'convict';
 
 export const config = convict({
-  htmlDir: {
-    arg: 'html-dir',
+  srcDir: {
+    arg: 'src-dir',
     default: 'src',
     doc: 'Directory of the source HTML files.',
-    env: 'NEWSLETTER_MINION_HTML_DIR',
+    env: 'NEWSLETTER_MINION_SRC_DIR',
     format: 'String',
   },
 });
