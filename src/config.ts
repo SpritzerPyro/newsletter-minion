@@ -8,6 +8,13 @@ export const config = convict({
     env: 'NEWSLETTER_MINION_OUT_DIR',
     format: 'String',
   },
+  sassPath: {
+    arg: 'sass-path',
+    default: 'scss/style.scss',
+    doc: 'Path to the main sass stylesheet file.',
+    env: 'NEWSLETTER_MINION_SASS_PATH',
+    format: 'String',
+  },
   srcDir: {
     arg: 'src-dir',
     default: 'src',
