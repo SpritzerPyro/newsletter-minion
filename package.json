@@ -1,0 +1,12 @@
+{
+  "name": "@spritzerpyro/newsletter-minion",
+  "version": "1.0.0",
+  "description": "Tools to conveniently create HTML emails and newsletters.",
+  "main": "dist/index.js",
+  "repository": "https://github.com/SpritzerPyro/newsletter-minion.git",
+  "author": "pueri <pyro@outlook.at>",
+  "license": "MIT",
+  "bin": {
+    "newsletter-minion": "dist/index.js"
+  }
+}
