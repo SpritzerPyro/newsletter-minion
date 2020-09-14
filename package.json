@@ -10,11 +10,13 @@
     "newsletter-minion": "dist/index.js"
   },
   "devDependencies": {
+    "@types/browser-sync": "^2.26.1",
     "@types/convict": "^5.2.1",
     "@types/sass": "^1.16.0",
     "typescript": "^4.0.2"
   },
   "dependencies": {
+    "browser-sync": "^2.26.12",
     "convict": "^6.0.0",
     "sass": "^1.26.10"
   }
