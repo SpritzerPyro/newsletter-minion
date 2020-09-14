@@ -12,12 +12,14 @@
   "devDependencies": {
     "@types/browser-sync": "^2.26.1",
     "@types/convict": "^5.2.1",
+    "@types/inline-css": "^0.0.33",
     "@types/sass": "^1.16.0",
     "typescript": "^4.0.2"
   },
   "dependencies": {
     "browser-sync": "^2.26.12",
     "convict": "^6.0.0",
+    "inline-css": "^2.6.3",
     "sass": "^1.26.10"
   }
 }
