@@ -8,5 +8,8 @@
   "license": "MIT",
   "bin": {
     "newsletter-minion": "dist/index.js"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.2"
   }
 }
