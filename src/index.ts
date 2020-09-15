@@ -24,6 +24,7 @@ async function compileFile(fileName: string): Promise<void> {
     : '';
 
   const data = await inline(html.toString(), {
+    applyTableAttributes: true,
     applyWidthAttributes: true,
     extraCss,
     removeHtmlSelectors: true,
