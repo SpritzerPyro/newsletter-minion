@@ -6,7 +6,7 @@ import { renderSync } from 'sass';
 import { config } from './config';
 import inline = require('inline-css');
 
-const { outDir, sassDir, sassPath, srcDir } = config.get();
+const { outDir, sassDir, sassFile, srcDir } = config.get();
 
 async function compile(): Promise<void> {
   const raw = await promises.readdir(srcDir);
@@ -19,8 +19,8 @@ async function compile(): Promise<void> {
 
 async function compileFile(fileName: string): Promise<void> {
   const html = await promises.readFile(`${srcDir}/${fileName}`);
-  const extraCss = existsSync(sassPath)
-    ? renderSync({ file: sassPath }).css.toString()
+  const extraCss = existsSync(sassFile)
+    ? renderSync({ file: sassFile }).css.toString()
     : '';
 
   const data = await inline(html.toString(), {

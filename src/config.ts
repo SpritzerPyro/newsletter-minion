@@ -10,16 +10,16 @@ export const config = convict({
   },
   sassDir: {
     arg: 'sass-dir',
-    default: 'sass',
+    default: 'styles',
     doc: 'Directory of the stylesheet files.',
     env: 'NEWSLETTER_MINION_SASS_DIR',
     format: 'String',
   },
-  sassPath: {
-    arg: 'sass-path',
-    default: 'sass/style.scss',
+  sassFile: {
+    arg: 'sass-file',
+    default: 'styles/style.scss',
     doc: 'Path to the main sass stylesheet file.',
-    env: 'NEWSLETTER_MINION_SASS_PATH',
+    env: 'NEWSLETTER_MINION_SASS_FILE',
     format: 'String',
   },
   srcDir: {
