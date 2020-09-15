@@ -38,7 +38,7 @@ async function main(): Promise<void> {
   const bs = create();
 
   bs.watch(`${srcDir}/*.(htm|html)`).on('change', compile);
-  bs.watch(`${sassDir}/**/*.scss`).on('change', compile);
+  bs.watch(`${sassDir}/**/*.s(a|c)ss`).on('change', compile);
 
   await compile();
 
