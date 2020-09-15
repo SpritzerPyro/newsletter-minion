@@ -19,7 +19,7 @@ export const config = convict({
   },
   sassFile: {
     arg: 'sass-file',
-    default: 'styles/style.scss',
+    default: 'style.scss',
     doc: 'Path to the main sass stylesheet file.',
     env: 'NEWSLETTER_MINION_SASS_FILE',
     format: 'String',
@@ -33,6 +33,12 @@ export const config = convict({
   },
 });
 
+function resolveSassFile(): void {
+  const data = join(config.get('sassDir'), config.get('sassFile'));
+
+  config.set('sassFile', data);
+}
+
 function source(path: string): void {
   const data = join(__dirname, '../../../..', path);
 
@@ -45,5 +51,7 @@ function source(path: string): void {
 }
 
 ['newsletter-minion.json'].map(source);
+
+resolveSassFile();
 
 config.validate({ allowed: 'strict' });
