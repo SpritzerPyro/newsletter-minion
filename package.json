@@ -6,6 +6,9 @@
   "repository": "https://github.com/SpritzerPyro/newsletter-minion.git",
   "author": "pueri <pyro@outlook.at>",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "bin": {
     "newsletter-minion": "dist/index.js"
   },
