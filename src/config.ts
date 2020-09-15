@@ -1,4 +1,6 @@
 import convict from 'convict';
+import { existsSync } from 'fs';
+import { join } from 'path';
 
 export const config = convict({
   outDir: {
@@ -30,5 +32,18 @@ export const config = convict({
     format: 'String',
   },
 });
+
+function source(path: string): void {
+  const data = join(__dirname, '../../../..', path);
+
+  if (!existsSync(data)) {
+    return console.warn(`'${data}' not found`);
+  }
+
+  config.loadFile(data);
+  console.info(`Loaded '${data}'`);
+}
+
+['newsletter-minion.json'].map(source);
 
 config.validate({ allowed: 'strict' });
