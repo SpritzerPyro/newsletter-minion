@@ -33,11 +33,13 @@ async function compileFile(fileName: string): Promise<void> {
   await promises.writeFile(`${outDir}/${fileName}`, data);
 }
 
-function main(): void {
+async function main(): Promise<void> {
   const bs = create();
 
   bs.watch(`${srcDir}/*.(htm|html)`).on('change', compile);
   bs.watch(`${sassDir}/*.scss`).on('change', compile);
+
+  await compile();
 
   bs.init({
     server: { baseDir: outDir, directory: true },
